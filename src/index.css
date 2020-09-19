@@ -1,0 +1,12 @@
+@import './styles/fonts.css';
+body {
+  margin: 0;
+  font-family: Hero-Regular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: Hero-Regular;
+}

@@ -1,0 +1,70 @@
+@mixin search-color {
+  font-family: Hero-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #b3b9c2;
+}
+
+.search-wrapper {
+  flex: 1 1 auto;
+  margin-right: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  align-items: center;
+  display: flex;
+
+  .search-icon {
+    width: 21.5px;
+    fill: #c2c8d0;
+    margin-left: 18px;
+  }
+
+  input {
+    width: 100%;
+    background-color: transparent;
+    @include search-color();
+    &::placeholder {
+      @include search-color();
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    height: 20px;
+    border: none;
+  }
+}
+.date-picker-wrapper {
+  flex: 0 1 250px;
+}
+
+@media only screen and (max-width: 578px) {
+  .search-wrapper input {
+    display: none;
+  }
+  .content-header .search-wrapper {
+    flex: 0 0 57px;
+  }
+  .content-header .date-picker-wrapper {
+    flex: 1 1 auto;
+  }
+  .date-picker-wrapper .down-icon, .date-picker-wrapper .date-icon{
+    flex: 0 1 40px;
+  }
+  .date-picker-wrapper input{
+    flex:1 1 auto;
+  }
+}
+
+
+@media only screen and (max-width: 340px) {
+  .date-picker-wrapper input{
+    font-size: 12px !important;
+    margin-left: -10px;
+  }
+  .MuiIconButton-root{
+    padding-left: 0px;
+  }
+}

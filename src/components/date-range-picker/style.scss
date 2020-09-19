@@ -1,0 +1,26 @@
+.date-picker-wrapper {
+  background-color: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+
+  input {
+    &:focus {
+      outline: none;
+      border: none;
+    }
+    height: 17px;
+    border: none;
+    font-family: Hero-Bold;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .down-icon,
+  .date-icon {
+    fill: #b3b9c2;
+    width: 20px;
+  }
+}

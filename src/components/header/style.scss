@@ -1,0 +1,110 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: #ffff;
+  padding: 0 20px;
+
+  &-right {
+    display: flex;
+    align-items: center;
+    .logo {
+      width: 50px;
+      height: 40px;
+      margin-right: 20px;
+    }
+    .logoText {
+      font-family: Hero-Bold;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+    }
+  }
+
+  &-left {
+    .user {
+      display: flex;
+      align-items: center;
+      &-info {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+      }
+      &-name {
+        font-family: Hero-Bold;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: right;
+        color: #000000;
+      }
+      &-email {
+        font-family: Hero-Regular;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: right;
+        color: #000000;
+        opacity: 0.4;
+      }
+      &-avatar {
+        display: flex;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+      &-avatarImg {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        display: flex;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      &-separator {
+        width: 1px;
+        height: 24px;
+        background: #b3b9c2;
+        opacity: 0.2;
+        margin-left: 5px;
+        margin-right: 21px;
+      }
+      &-notification {
+        display: flex;
+        margin-right: 24px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+      &-logout {
+        display: flex;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header-logoText {
+    display: none;
+  }
+  .header-left .user-info{
+    display: none;
+  }
+}
+// @mixin transform($property) {
+//   -webkit-transform: $property;
+//   -ms-transform: $property;
+//   transform: $property;
+// }
+// .box { @include transform(rotate(30deg)); }
+
+// Extend/Inheritance
+
+// https://sass-lang.com/guide

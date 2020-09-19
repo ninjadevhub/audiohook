@@ -1,0 +1,58 @@
+.bar-chart {
+  background-color: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+
+  .title {
+    font-family: Hero-Bold;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .wrapper {
+    padding: 20px;
+    width: 100%;
+  }
+  table {
+    width: 100%;
+  }
+  .progress-wrapper-item {
+    td {
+      height: 30px;
+    }
+    .label {
+      font-family: Hero-Regular;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+    }
+    .percent {
+      font-family: Hero-Regular;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: right;
+      color: #b3b9c2;
+    }
+    .progress-bar {
+      width: 70%;
+    }
+    .MuiLinearProgress-colorPrimary {
+      background-color: white;
+      border-radius: 6px;
+      height: 8px;
+    }
+    .first {
+      .MuiLinearProgress-barColorPrimary {
+        opacity: 1;
+        background-color: #8479ff;
+      }
+    }
+    .MuiLinearProgress-barColorPrimary {
+      background-color: #6c63ff;
+      opacity: 0.2;
+      border-radius: 6px;
+    }
+  }
+}

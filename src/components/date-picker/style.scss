@@ -1,0 +1,96 @@
+.custom-date-picker-wrapper {
+  .label-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+
+    .label {
+      font-family: Hero-Regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+
+      color: #b3b9c2;
+    }
+    .optional {
+      font-family: Hero-Regular;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+
+      color: #6c63ff;
+    }
+  }
+  .custom-date-picker {
+    background: #ffffff;
+    border: 1px solid #f0f1f3;
+    box-sizing: border-box;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    margin-top: 8px;
+
+    .MuiSvgIcon-root{
+        fill: #6C63FF;
+        width: 20px;
+        height: 20px;
+    }
+    .MuiInput-underline:after {
+      border-bottom-color: 'yellow';
+    }
+    .Mui-focused {
+      outline: none;
+      border: none;
+    }
+    .MuiInput-underline {
+      &:focus {
+        outline: none;
+        border: none;
+      }
+      &:after{
+          border: none;
+      }
+    }
+    .MuiInput-underline:before {
+      outline: none;
+      border: none;
+      content: '';
+    }
+    .MuiInput-underline:hover:not(.Mui-disabled):before {
+      border-bottom: none;
+    }
+    .MuiIconButton-root {
+      padding: 7px;
+    }
+    .calendar-icon {
+      fill: #6c63ff;
+    }
+    .MuiInputBase-input {
+      border: none;
+      font-family: Hero-Bold;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+
+      &:focus {
+        outline: none;
+        border: none;
+      }
+      &::placeholder {
+        font-family: Hero-Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #b3b9c2;
+      }
+    }
+  }
+}

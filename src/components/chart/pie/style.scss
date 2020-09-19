@@ -1,0 +1,50 @@
+.content-chart {
+  display: flex;
+  justify-content: space-between;
+
+  .pie-chart {
+    display: flex;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border: 1px solid #f0f1f3;
+    border-radius: 6px;
+  }
+}
+foreignObject {
+  display: block;
+  width: 65px;
+
+  .category {
+    font-family: Hero-Bold;
+    font-style: normal;
+    font-size: 14px;
+    // line-height: 22px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  .value {
+    font-family: Hero-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #b3b9c2;
+  }
+}
+
+polyline {
+  stroke-width: 1px;
+  stroke: #282d32;
+  stroke-opacity: 1;
+}
+.chart-title {
+  font-family: Hero-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: uppercase;
+
+
+  color: #000000;
+}
