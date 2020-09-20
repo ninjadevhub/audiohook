@@ -3,6 +3,7 @@ import React from 'react';
 import { applyMiddleware, createStore } from 'redux';
 import logger from 'redux-logger';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider as ReduxProvider } from 'react-redux';
 
 import reducer from '../../store/reducers';
 import saga from '../../store/sagas';
@@ -15,7 +16,11 @@ export const store = createStore(
 sagaMiddleware.run(saga);
 
 const Provider: React.FC = ({ children }) => {
-  return <BrowserRouter>{children}</BrowserRouter>;
+  return (
+    <ReduxProvider store={store}>
+      <BrowserRouter>{children}</BrowserRouter>
+    </ReduxProvider>
+  );
 };
 
 export default Provider;

@@ -6,7 +6,7 @@ import { routes } from './routing';
 import Header from './components/header';
 const App: React.FC = () => {
   const pages = routes.map((x, i) => (
-    <Route key={i} path={x.url}>
+    <Route key={i} path={x.url} exact={true}>
       <x.content />
     </Route>
   ));

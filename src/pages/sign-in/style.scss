@@ -1,0 +1,43 @@
+.sign-in {
+  display: flex;
+  height: calc(100vh - 70px);
+
+  &__left-side {
+    width: 60%;
+    background-color: #fff;
+  }
+
+  &__form-wrapper {
+    max-width: 440px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  &__sign-up-message {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    text-align: center;
+
+    a {
+      color: #6c63ff;
+      text-decoration: none;
+    }
+  }
+
+  &__right-side {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6c63ff;
+  }
+
+  &__icon {
+    max-width: 100%;
+  }
+}
