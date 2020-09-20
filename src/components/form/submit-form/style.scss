@@ -1,0 +1,30 @@
+.submit-form {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__input {
+    height: 50px;
+    padding: 16px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px solid #F0F1F3;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  &__button {
+    font: 16px/19px 'Hero-Regular', sans-serif;
+    color: white;
+    background-color: #6c63ff;
+    padding: 15px 0;
+    border: none;
+  }
+}

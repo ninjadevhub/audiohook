@@ -1,0 +1,25 @@
+.sign-in-form {
+  &__title {
+    margin-bottom: 10px;
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  &__subtitle {
+    margin-bottom: 70px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__passcode-message {
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    a {
+      color: #6c63ff;
+      text-decoration: none;
+    }
+  }
+}
