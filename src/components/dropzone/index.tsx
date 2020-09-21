@@ -36,8 +36,9 @@ const MyDropzone: React.FC = () => {
   return (
     <>
       {fileDropped ? (
-        <div>
+        <div className="dropped-files-screen">
           <FileDetails name={name} size={getFormattedFileSize(size)} />
+          <button className="dropped-files-screen__add">+ Create New Ad</button>
         </div>
       )
        : (<div {...getRootProps()} className="dropzone">
