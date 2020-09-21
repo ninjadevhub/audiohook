@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import OptimizationForm from '../../components/form/optimization';
 import AudienceForm from '../../components/form/audience';
+import CreativeStep from '../../components/creative-step';
 
 const arrow = '/images/arrow.svg';
 function getSteps() {
@@ -28,7 +29,7 @@ function renderStepComponent(step: number) {
     case 1:
       return <AudienceForm />;
     case 2:
-      return 'This is the bit I really care about!';
+      return <CreativeStep />;
     default:
       return <OptimizationForm />;
   }
