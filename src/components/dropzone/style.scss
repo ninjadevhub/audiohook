@@ -24,3 +24,17 @@
     color: #B3B9C2;
   }
 }
+
+.dropped-files-screen {
+  &__add {
+    display: block;
+    margin-left: auto;
+    margin-top: 20px;
+    border: none;
+    background: none;
+    color: #6c63ff;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

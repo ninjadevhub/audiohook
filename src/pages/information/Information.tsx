@@ -95,7 +95,7 @@ const Information: React.FC = () => {
             color="primary"
             onClick={handleNext}
           >
-            {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+            {activeStep === steps.length - 1 ? 'Add Campaign' : 'Next'}
           </Button>
         </div>
       </div>
