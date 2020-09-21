@@ -10,6 +10,9 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import OptimizationForm from '../../components/form/optimization';
+import AudienceForm from '../../components/form/audience';
+import CreativeStep from '../../components/creative-step';
+
 const arrow = '/images/arrow.svg';
 function getSteps() {
   return [
@@ -19,18 +22,19 @@ function getSteps() {
   ];
 }
 
-function getStepContent(step: number) {
+function renderStepComponent(step: number) {
   switch (step) {
     case 0:
-      return 'Select campaign settings...';
+      return <OptimizationForm />;
     case 1:
-      return 'What is an ad group anyways?';
+      return <AudienceForm />;
     case 2:
-      return 'This is the bit I really care about!';
+      return <CreativeStep />;
     default:
-      return 'Unknown step';
+      return <OptimizationForm />;
   }
 }
+
 const Information: React.FC = () => {
   const history = useHistory();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -77,7 +81,7 @@ const Information: React.FC = () => {
         </Stepper>
       </div>
       <div className="information">
-        <OptimizationForm />
+        {renderStepComponent(activeStep)}
         <div className="action-btn">
           {activeStep !== 0 ? (
             <Button className="cancel-btn" onClick={handleBack}>Previous step</Button>
