@@ -61,7 +61,7 @@ const Information: React.FC = () => {
         <div className="back" onClick={onBackBtnClicked}>
           {/* <ArrowBackIosIcon /> */}
           <img src={arrow} />
-          Back to Dashboard
+          <span>Back to Dashboard</span>
         </div>
         <Stepper activeStep={activeStep}>
           {steps.map((label, index) => {
@@ -71,10 +71,10 @@ const Information: React.FC = () => {
               <Step key={label} {...stepProps}>
                 <StepLabel {...labelProps} className="step-label">
                   {label}
-                  {index < 2 && (
+                </StepLabel>
+                {index < 2 && (
                     <span className="step-divider">- - - - - - - - -</span>
                   )}
-                </StepLabel>
               </Step>
             );
           })}
@@ -98,6 +98,7 @@ const Information: React.FC = () => {
             {activeStep === steps.length - 1 ? 'Add Campaign' : 'Next'}
           </Button>
         </div>
+        <p></p>
       </div>
     </Page>
   );

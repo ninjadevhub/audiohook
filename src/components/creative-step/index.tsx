@@ -1,8 +1,7 @@
 import 'date-fns';
-import React, { useState } from 'react';
+import React from 'react';
 import './style.scss';
 
-import TextField from '@material-ui/core/TextField';
 import Dropzone from '../dropzone';
 
 const CreativeStep: React.FC = () => {
@@ -11,7 +10,7 @@ const CreativeStep: React.FC = () => {
       <div className="creative-step__title">Creative</div>
       <div className="creative-step__wrapper">
         <div className="creative-step__dropzone">
-          <Dropzone />
+          <Dropzone showCreateAd />
         </div>
       </div>
     </div>

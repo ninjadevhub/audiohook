@@ -23,7 +23,11 @@ interface IFile {
   type: string;
 }
 
-const MyDropzone: React.FC = () => {
+interface IMyDropzone {
+  showCreateAd?: boolean;
+}
+
+const MyDropzone: React.FC<IMyDropzone> = ({ showCreateAd = false }) => {
   const [fileDropped, setFileDropped] = useState(false);
   const [acceptedFile, setAcceptedFile] = useState<IFile>({name: '', size: 0, type: ''});
   const onDrop = useCallback((acceptedFiles: any[]) => {
@@ -38,7 +42,7 @@ const MyDropzone: React.FC = () => {
       {fileDropped ? (
         <div className="dropped-files-screen">
           <FileDetails name={name} size={getFormattedFileSize(size)} />
-          <button className="dropped-files-screen__add">+ Create New Ad</button>
+          {showCreateAd && <button className="dropped-files-screen__add">+ Create New Ad</button>}
         </div>
       )
        : (<div {...getRootProps()} className="dropzone">

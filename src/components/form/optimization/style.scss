@@ -28,10 +28,11 @@
     color: #000000;
   }
   .form {
+    box-sizing: border-box;
     background: #ffffff;
     border: 1px solid #f0f1f3;
     border-radius: 6px;
-    width: 496px;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -75,6 +76,15 @@
         &:nth-child(2) {
           margin-left: 10px;
         }
+      }
+    }
+
+    .cpm-item {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      .custom-input-wrapper {
+        flex-basis: calc(50% - 10px);
       }
     }
   }
@@ -168,5 +178,65 @@
   }
   .custom-input-wrapper.two-column.checkbox-wrapper {
     padding-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .opt-wrapper .form {
+    padding: 20px;
+
+    .item {
+      flex-direction: column;
+      margin-bottom: 30px;
+
+      .custom-date-picker-wrapper:first-child,
+      .custom-date-picker-wrapper:last-child,
+      .custom-input-wrapper:first-child,
+      .custom-input-wrapper:last-child {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      .custom-input-wrapper {
+        margin-bottom: 15px;
+      }
+
+      .custom-date-picker-wrapper {
+        &:first-child {
+          .custom-date-picker {
+            margin-bottom: 15px;
+          }
+        }
+        
+        .custom-date-picker {
+          align-items: flex-start;
+        }
+      }
+
+      .custom-input-wrapper {
+        padding-bottom: 0;
+      }
+
+      .checkbox-wrapper {
+        .MuiFormControlLabel-label {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .cpm-item {
+      .custom-input-wrapper:nth-child(2n) {
+        order: 1;
+        margin-bottom: 0;
+      }
+
+      .info-label {
+        margin: 0;
+      }
+    }
+
+    .add {
+      margin-top: -25px;
+    }
   }
 }
