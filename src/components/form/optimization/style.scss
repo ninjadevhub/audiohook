@@ -80,8 +80,13 @@
     }
 
     .cpm-item {
-      flex-wrap: wrap;
-      justify-content: flex-start;
+      display: block;
+
+      &__wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
 
       .custom-input-wrapper {
         flex-basis: calc(50% - 10px);
@@ -225,13 +230,21 @@
     }
 
     .cpm-item {
+      position: relative;
+
+      &__wrapper {
+        flex-direction: column;
+      }
+
       .custom-input-wrapper:nth-child(2n) {
-        order: 1;
         margin-bottom: 0;
+        margin-top: 10px;
       }
 
       .info-label {
+        position: absolute;
         margin: 0;
+        top: 76px;
       }
     }
 
