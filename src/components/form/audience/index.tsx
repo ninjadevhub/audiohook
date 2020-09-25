@@ -4,6 +4,7 @@ import './style.scss';
 
 import TextField from '@material-ui/core/TextField';
 import AudienceOption from '../../audience-option';
+import Dropzone from '../../dropzone';
 
 const DocumentIcon = '/images/document-icon.svg';
 
@@ -38,12 +39,14 @@ const AudienceForm: React.FC = () => {
   }
 
   return (
-    <div className="opt-wrapper">
+    <div className="opt-wrapper audience">
       <div className="title">Audience & Geography</div>
       <div className="form">
         <div className="form-wrapper">
           <div className="audience-header">
-            <img src={DocumentIcon} className="audience-header__icon" alt="" />
+            <div className="audience-header__icon-wrapper">
+              <img src={DocumentIcon} className="audience-header__icon" alt="" />
+            </div>
             <div>
               <h5 className="audience-header__title">Add Audience and Geography</h5>
               <p className="audience-header__subtitle">Choose retargeting, or look alike, or upload email list.</p>
@@ -55,13 +58,14 @@ const AudienceForm: React.FC = () => {
           </form>
 
           <div className="item">
-            <div className="custom-input-wrapper">
+            {selectedOption === 'Retargeting' ? (<div className="custom-input-wrapper">
               <div className="label">Geography</div>
               <TextField
                 label=""
                 className="custom-input"
               />
-            </div>
+            </div>) : selectedOption === 'Email list' ?
+            <Dropzone /> : null}
           </div>
         </div>
       </div>

@@ -23,3 +23,17 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .sign-in-form {
+    &__title {
+      margin-top: 0;
+    }
+  }
+
+  .passcode {
+    .sign-in-form__subtitle {
+      margin-bottom: 46px;
+    }
+  }
+}

@@ -79,7 +79,7 @@ const OptimizationForm: React.FC = () => {
               />
             </div>
           </div>
-          <div className="item">
+          <div className="item cpm-item">
             <div className="custom-input-wrapper two-column">
               <div className="label">Max CPM, $</div>
               <TextField
@@ -104,9 +104,9 @@ const OptimizationForm: React.FC = () => {
                 label="Auto Optimized CPM"
               />
             </div>
-          </div>
-          <div className="info-label">
-            Set a max CPM or select "Auto Optimized CPM"
+            <div className="info-label">
+              Set a max CPM or select "Auto Optimized CPM"
+            </div>
           </div>
 
           <div className="item">

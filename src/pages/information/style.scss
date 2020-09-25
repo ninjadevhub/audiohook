@@ -1,10 +1,12 @@
 .information {
-  min-width: 496px;
+  max-width: 496px;
   background-color: #f2f2f2;
   height: calc(100vh - 122px);
   display: block;
   margin: 0 auto;
+  box-sizing: border-box;
 }
+
 .stepper-wrapper {
   .back {
     position: absolute;
@@ -34,6 +36,11 @@
   .MuiStepper-root {
     padding: 0;
   }
+
+  .MuiStep-root {
+    display: flex;
+  }
+
   .MuiStepLabel-label {
     font-family: Hero-Regular;
     font-style: normal;
@@ -123,5 +130,42 @@
     text-align: center;
     color: #ffffff;
     padding: 8px 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .information {
+    height: 100%;
+    width: 100%;
+    min-height: calc(100vh - 122px);
+    padding: 0 20px 40px;
+
+    .action-btn {
+      .MuiButton-containedPrimary {
+        padding: 6px 0;
+      }
+      
+      .next-btn .MuiButton-label {
+        padding: 8px 24px;
+        text-transform: initial;
+      }
+    }
+  }
+
+  .stepper-wrapper {
+    .back span {
+      display: none;
+    }
+
+    .MuiStepLabel-labelContainer {
+      display: none;
+    }
+
+    .step-divider  {
+      display: block;
+      width: 50px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
   }
 }

@@ -17,9 +17,9 @@ export interface ISignInForm {
 
 const SignInForm: React.FC<ISignInForm> = ({ title, subtitle, label, type = "text", placeholder, buttonLabel, formHandler, handleInputChange, isPasscodeStep }) => {
   return (
-    <div className="sign-in-form">
+    <div className={`sign-in-form ${isPasscodeStep ? 'passcode' : ''}`}>
       <h1 className="sign-in-form__title">{title}</h1>
-      <h1 className="sign-in-form__subtitle">{subtitle}</h1>
+      <h2 className="sign-in-form__subtitle">{subtitle}</h2>
       <SubmitForm label={label} type={type} placeholder={placeholder} buttonLabel={buttonLabel} formHandler={formHandler} handleInputChange={handleInputChange} />
       {isPasscodeStep ? <p className="sign-in-form__passcode-message">Don’t receive the passcode, <Link to="/">request a new passcode</Link></p> : null}
     </div>

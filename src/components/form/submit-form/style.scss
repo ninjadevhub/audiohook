@@ -18,6 +18,12 @@
     border: 1px solid #F0F1F3;
     border-radius: 6px;
     box-sizing: border-box;
+
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+      color: #B3B9C2;
+    }
   }
 
   &__button {
